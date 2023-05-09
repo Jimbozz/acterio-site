@@ -1,7 +1,14 @@
 import React from "react";
+import Layout from "../../layout/Layout";
+import PostsList from "./PostsList";
 
 function PostsPage() {
-  return <h1>Posts page - list of posts</h1>;
+  return (
+    <Layout>
+      <h1 className="fw-bold">All blog posts</h1>
+      <PostsList />
+    </Layout>
+  );
 }
 
 export default PostsPage;
