@@ -3,9 +3,10 @@ import NavBar from "./NavBar";
 
 function Layout(props) {
   return (
-    <div>
+    <div className="wrapper">
       <NavBar />
-      <main>{props.children}</main>
+      <main className="container py-5">{props.children}</main>
+      <footer>Footer</footer>
     </div>
   );
 }
