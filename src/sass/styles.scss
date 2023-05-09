@@ -1,7 +1,36 @@
 //Custom variables
 
+$color-beige: #fbf8ee;
+$color-green: #00573e;
+
 //Bootstrap variables
+
+$theme-colors: (
+  "primary": $color-green,
+  // "success": $color-success,
+  "info": #6eadf4,
+  // "warning": $color-warning,
+  "danger": red,
+  "light": $color-beige,
+  // "dark": $color-gray-dark,,,,,,,,,,,,,
+);
+
+// $navbar-light-color: green;
+// $navbar-light-active-color: red;
+// $navbar-light-brand-color: green;
+
+$font-family-base: "Inter", sans-serif;
+$card-height: 100%;
+$card-border-width: 2px;
+$card-bg: $color-beige;
+$card-border-color: $color-green;
+$body-bg: $color-beige;
+$body-color: $color-green;
+// $badge-color: $color-green;
 
 @import "~bootstrap/scss/bootstrap";
 
 //Partials
+
+@import "./partials/general";
+@import "./partials/cards";
