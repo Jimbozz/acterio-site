@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../constants/api";
 import axios from "axios";
-import { Alert, Col, Container, Row } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import PostCard from "./PostCard";
 import Loading from "../common/Loading";
 import AlertError from "../common/AlertError";
-
-const url = API_URL;
 
 export default function PostsList() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const url = API_URL;
 
   useEffect(() => {
     const getPosts = async () => {
@@ -19,7 +19,6 @@ export default function PostsList() {
         setLoading(true);
         const response = await axios.get(url);
         setPosts(response.data.posts);
-        console.log(response.data.posts);
       } catch (error) {
         console.log(error);
         setError(error.toString());
@@ -28,7 +27,7 @@ export default function PostsList() {
       }
     };
     getPosts();
-  }, []);
+  }, [url]);
 
   if (loading) {
     return <Loading />;
@@ -44,7 +43,7 @@ export default function PostsList() {
 
   return (
     <>
-      <Row xs={1} sm={2} className="g-4">
+      <Row xs={1} sm={3} className="g-4">
         {posts.map((post) => {
           const { id, title, body, tags } = post;
           return (

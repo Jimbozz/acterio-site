@@ -1,14 +1,12 @@
-import React from "react";
 import Layout from "../../layout/Layout";
-import Button from "react-bootstrap/Button";
 import { NavLink } from "react-router-dom";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <Layout>
-      <div className="py-5 text-center">
-        <h1 className="fw-bold">This is the Homepage</h1>
-        <p>
+      <div className="py-5 text-center d-flex align-items-center flex-column justify-content-center h-100">
+        <h1 className="fw-bold">Welcome to our blog!</h1>
+        <p className="content-width">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -25,5 +23,3 @@ function HomePage() {
     </Layout>
   );
 }
-
-export default HomePage;

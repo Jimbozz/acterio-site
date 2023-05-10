@@ -35,3 +35,23 @@ footer {
   display: flex;
   padding: 0px 2rem;
 }
+
+//Navbar
+
+.nav-link {
+  font-weight: 600;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+}
+
+//Back buttons
+
+.btn-link {
+  text-decoration: none;
+}

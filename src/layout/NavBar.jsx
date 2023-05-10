@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+export default function NavBar() {
   return (
     <Navbar className="sticky-top" expand="lg" bg="light">
       <Container>
@@ -25,5 +25,3 @@ function NavBar() {
     </Navbar>
   );
 }
-
-export default NavBar;

@@ -1,14 +1,11 @@
-import React from "react";
 import Layout from "../../layout/Layout";
 import PostsList from "./PostsList";
 
-function PostsPage() {
+export default function PostsPage() {
   return (
     <Layout>
-      <h1 className="fw-bold">All blog posts</h1>
+      <h1 className="fw-bold fs-3 mb-4 pt-5">All blog posts</h1>
       <PostsList />
     </Layout>
   );
 }
-
-export default PostsPage;
